@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cześć, jestem Szymon!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0d1117;
+            background-image: linear-gradient(#161b22 1px, transparent 1px),
+            linear-gradient(90deg, #161b22 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Shake Animation */
+        @keyframes shake {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            20% { transform: translate(-1px, 1px) rotate(-1deg); }
+            40% { transform: translate(-1px, -1px) rotate(1deg); }
+            60% { transform: translate(1px, 1px) rotate(0deg); }
+            80% { transform: translate(1px, -1px) rotate(1deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        .animate-shake {
+            animation: shake 0.6s infinite;
+            display: inline-block;
+        }
+
+        /* Glow Animation */
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+                color: #aaffee;
+            }
+            50% {
+                text-shadow: 0 0 10px #00ffee, 0 0 20px #00ffee, 0 0 30px #00ffee;
+                color: #ffffff;
+            }
+        }
+
+        .text-glow {
+            animation: glow 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col min-h-screen">
+
+<div class="flex-grow flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        Cześć, jestem <span class="animate-shake">Szymon!</span>
+    </h1>
+    <p class="text-xl md:text-2xl text-glow mb-12">Witaj w świecie paczek Minecraft!</p>
+
+    <div class="flex gap-6 justify-center">
+        <!-- Lewa karta -->
+        <div class="w-48 h-72 transition-transform duration-300 transform hover:scale-105 hover:-translate-y-2 rotate-[-6deg] hover:rotate-0">
+            <div class="bg-[#0f1624] w-full h-full rounded-xl shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/192x288" alt="Obrazek 1" class="w-full h-full object-cover" />
+            </div>
+        </div>
+
+        <!-- Środkowa karta -->
+        <div class="w-48 h-72 transition-transform duration-300 transform hover:scale-105 hover:-translate-y-2 rotate-0">
+            <div class="bg-[#0f1624] w-full h-full rounded-xl shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/192x288" alt="Obrazek 2" class="w-full h-full object-cover" />
+            </div>
+        </div>
+
+        <!-- Prawa karta -->
+        <div class="w-48 h-72 transition-transform duration-300 transform hover:scale-105 hover:-translate-y-2 rotate-[6deg] hover:rotate-0">
+            <div class="bg-[#0f1624] w-full h-full rounded-xl shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/192x288" alt="Obrazek 3" class="w-full h-full object-cover" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center text-gray-500 text-sm py-4">
+    © 2025. Made by <a href="https://kanyd.pl" class="underline hover:text-white transition">Kanyd.pl</a>
+</footer>
+
+</body>
+</html>
